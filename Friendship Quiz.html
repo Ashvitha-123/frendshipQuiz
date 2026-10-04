@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)file:///D:/freinship/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Friendship Quiz</title>
+    <link rel="stylesheet" href="./Friendship Quiz_files/style.css">
+</head>
+
+<body>
+
+    <!-- START SCREEN -->
+
+    <div class="container" id="startScreen" style="display: none;">
+
+        <h1>🎭</h1>
+
+        <p>
+            <b>Ashvitha</b> is testing
+            <br>
+            her <i>real</i> friends 👀
+        </p>
+
+        <p>
+            Will you pass?
+            <br>
+            Let's see 👇
+        </p>
+
+        <button onclick="startQuiz()">
+            FIND OUT 😈
+        </button>
+
+        <button onclick="showCreator()">
+            ✨ CREATE YOUR OWN QUIZ
+        </button>
+
+    </div>
+
+
+    <!-- QUIZ SCREEN -->
+
+    <div class="container" id="quizScreen" style="display: block;">
+
+        <p id="questionNumber">Question 5 of 10</p>
+
+        <h2 id="question">How important are you to Ashvitha? 👀</h2>
+
+        <div id="options">
+            <button id="answerButton0" onclick="selectAnswer(0)">
+                ❤️ Bestie
+            </button>
+        
+            <button id="answerButton1" onclick="selectAnswer(1)">
+                😌 Good friend
+            </button>
+        
+            <button id="answerButton2" onclick="selectAnswer(2)">
+                🙂 Friend
+            </button>
+        
+            <button id="answerButton3" onclick="selectAnswer(3)">
+                💀 Who are you?
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- RESULT SCREEN -->
+
+    <div class="container" id="resultScreen" style="display: none;">
+
+        <h1>🏆</h1>
+
+        <h2 id="resultTitle"></h2>
+
+        <p id="resultMessage"></p>
+
+        <button onclick="restartQuiz()">
+            TRY AGAIN 🔄
+        </button>
+
+        <button onclick="showCreator()">
+            ✨ CREATE YOUR OWN QUIZ
+        </button>
+
+    </div>
+
+
+    <!-- CREATE QUIZ SCREEN -->
+
+    <div class="container" id="creatorScreen" style="display: none;">
+
+        <h1>✨</h1>
+
+        <h2>Create Your Own Quiz</h2>
+
+        <p id="creatorProgress">
+            Question 1 of 10
+        </p>
+
+
+        <!-- CREATOR NAME -->
+
+        <input type="text" id="creatorName" placeholder="Your name">
+
+
+        <!-- QUESTION -->
+
+        <input type="text" id="creatorQuestion" placeholder="Enter your question">
+
+
+        <!-- OPTIONS -->
+
+        <input type="text" id="option0" placeholder="Option A">
+
+        <input type="text" id="option1" placeholder="Option B">
+
+        <input type="text" id="option2" placeholder="Option C">
+
+        <input type="text" id="option3" placeholder="Option D">
+
+
+        <!-- CORRECT ANSWER -->
+
+        <p>
+            ☑️ Tick the correct answer
+        </p>
+
+        <div class="correct-answer">
+
+            <label>
+                <input type="radio" name="correctAnswer" value="0" checked="">
+                Option A
+            </label>
+
+            <label>
+                <input type="radio" name="correctAnswer" value="1">
+                Option B
+            </label>
+
+            <label>
+                <input type="radio" name="correctAnswer" value="2">
+                Option C
+            </label>
+
+            <label>
+                <input type="radio" name="correctAnswer" value="3">
+                Option D
+            </label>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <button onclick="addCreatorQuestion()">
+            ADD QUESTION ➕
+        </button>
+
+        <button onclick="cancelCreator()">
+            CANCEL ❌
+        </button>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./Friendship Quiz_files/script.js"></script>
+
+
+
+</body></html>
